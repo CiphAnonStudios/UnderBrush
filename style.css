@@ -1,1 +1,189 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  background-color: #0b0d10;
+  color: #e2e8f0;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#game-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #050608;
+  border: 4px solid #1a222d;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.9), 0 0 15px rgba(22, 101, 52, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+#hud {
+  width: 960px;
+  background: rgba(10, 14, 18, 0.95);
+  border-bottom: 2px solid #202b38;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.hud-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 120px;
+}
+
+.bar-label {
+  color: #8da4b4;
+  font-size: 9px;
+}
+
+.bar-container {
+  width: 120px;
+  height: 10px;
+  background: #141b22;
+  border: 1px solid #303e4f;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+#health-bar {
+  width: 100%;
+  height: 100%;
+  background: #e11d48;
+  transition: width 0.15s ease;
+}
+
+#stamina-bar {
+  width: 100%;
+  height: 100%;
+  background: #eab308;
+  transition: width 0.1s ease;
+}
+
+#stealth-bar {
+  width: 0%;
+  height: 100%;
+  background: #10b981;
+  transition: width 0.2s ease;
+}
+
+.center-panel {
+  text-align: center;
+  min-width: 250px;
+}
+
+#status-text {
+  color: #38bdf8;
+  font-size: 11px;
+}
+
+#predator-state-badge {
+  font-size: 10px;
+  color: #ef4444;
+  background: #2a0b12;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-top: 2px;
+  display: inline-block;
+  border: 1px solid #7f1d1d;
+}
+
+#inventory-panel {
+  text-align: right;
+}
+
+#held-item-name {
+  color: #facc15;
+  font-size: 12px;
+}
+
+canvas {
+  display: block;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  background-color: #121920;
+}
+
+#controls-bar {
+  width: 960px;
+  background: #090c10;
+  border-top: 2px solid #1a222d;
+  display: flex;
+  justify-content: space-around;
+  padding: 6px 10px;
+  font-size: 10px;
+  color: #64748b;
+}
+
+#controls-bar span b {
+  color: #94a3b8;
+}
+
+#screen-overlay {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 960px;
+  height: 540px;
+  background: rgba(3, 7, 18, 0.88);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  backdrop-filter: blur(4px);
+  z-index: 10;
+}
+
+#screen-overlay.hidden {
+  display: none;
+}
+
+#overlay-title {
+  font-size: 42px;
+  color: #f43f5e;
+  letter-spacing: 4px;
+}
+
+#overlay-desc {
+  font-size: 14px;
+  color: #cbd5e1;
+  max-width: 500px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+#restart-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 24px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s;
+  border: 1px solid #60a5fa;
+}
+
+#restart-btn:hover {
+  background: #1d4ed8;
+}
 
