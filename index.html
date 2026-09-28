@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecosystem: The Stalker in the Wilds</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-wrapper">
+    <div id="hud">
+      <div class="hud-panel">
+        <div class="bar-label">VITALITY</div>
+        <div class="bar-container"><div id="health-bar"></div></div>
+      </div>
+      <div class="hud-panel">
+        <div class="bar-label">STAMINA</div>
+        <div class="bar-container"><div id="stamina-bar"></div></div>
+      </div>
+      <div class="hud-panel">
+        <div class="bar-label">STEALTH</div>
+        <div class="bar-container"><div id="stealth-bar"></div></div>
+      </div>
+      <div class="hud-panel center-panel">
+        <div id="status-text">EXPLORING ECOSYSTEM</div>
+        <div id="predator-state-badge">PREDATOR: DORMANT</div>
+      </div>
+      <div class="hud-panel" id="inventory-panel">
+        <div class="bar-label">HELD ITEM</div>
+        <div id="held-item-name">NONE</div>
+      </div>
+    </div>
+
+    <canvas id="gameCanvas" width="960" height="540"></canvas>
+
+    <div id="controls-bar">
+      <span><b>[A / D]</b> Run</span>
+      <span><b>[W / Space]</b> Jump</span>
+      <span><b>[S]</b> Crouch / Climb Down</span>
+      <span><b>[W / S]</b> Climb Vines</span>
+      <span><b>[E]</b> Pick Up / Interact</span>
+      <span><b>[F / Left Click]</b> Throw Item</span>
+      <span><b>[C]</b> Hide in Bush / Crevice</span>
+    </div>
+
+    <!-- Game Over / Victory Overlay -->
+    <div id="screen-overlay" class="hidden">
+      <h1 id="overlay-title">SURVIVED</h1>
+      <p id="overlay-desc">You outsmarted the ecosystem.</p>
+      <button id="restart-btn" onclick="location.reload()">PLAY AGAIN</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
